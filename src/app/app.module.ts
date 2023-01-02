@@ -4,17 +4,27 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CenterComponent } from './components/center/center.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { ElectronicsComponent } from './components/electronics/electronics.component';
 
 @NgModule({
+  // Components, Pipes , Directives
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CenterComponent,
+    NavbarComponent,
+    CarouselComponent,
+    ElectronicsComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  // Dependent Modules
+  imports: [BrowserModule],
+  // Services / Injectables
   providers: [],
-  bootstrap: [AppComponent,HeaderComponent,FooterComponent]
+  // Main Component to Bootstrap/Load
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

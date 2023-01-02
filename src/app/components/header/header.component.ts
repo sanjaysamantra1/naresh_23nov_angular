@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-    
+  currentTime: string = '';
+
+  a = setInterval(() => {
+    this.currentTime = new Date().toLocaleTimeString();
+  }, 1000);
 }
