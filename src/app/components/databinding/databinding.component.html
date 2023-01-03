@@ -1,0 +1,33 @@
+<p>databinding works!</p>
+
+<div>My Name is: {{name}}</div>
+<div>My Name is: <span [innerHTML]="name"></span></div>
+<div>My Name is: <span bind-innerHTML="name"></span></div>
+
+<img src="https://m.cricbuzz.com/a/img/v1/192x192/i1/c171004/sachin-tendulkar.jpg">
+<img src="{{img_url}}" class="ms-1">
+<img [src]="img_url" class="ms-1">
+<img bind-src="img_url" class="ms-1">
+<br><br>
+<input value="Sachin Tendulkar" />
+<input value="{{name}}" class="ms-1" />
+<input [value]="name" class="ms-1" />
+<input bind-value="name" class="ms-1" />
+<hr>
+<button disabled="{{flag}}" class="btn btn-primary">Btn-1</button>
+<button [disabled]="flag" class="btn btn-primary ms-1">Btn-2</button>
+<button bind-disabled="flag" class="btn btn-primary ms-1">Btn-3</button>
+
+<button (click)="f1()" class="btn btn-secondary ms-1">btn-4</button>
+<button on-click="f1()" class="btn btn-secondary ms-1">btn-5</button>
+<hr>
+<h1 [hidden]="flag">This is A Paragraph</h1>
+<!-- <button (click)="toggleFlag()">SHOW/HIDE</button> -->
+<button (click)="this.flag = !this.flag">
+    {{flag ? 'SHOW' : 'HIDE'}}
+</button>
+<hr>
+<input type="{{flag?'text':'password'}}">
+<input type="checkbox" (change)="this.flag = !this.flag"> Show password
+<br>
+<button (click)="this.flag = !this.flag"> {{flag ? 'HIDE' : 'SHOW'}} Password</button>

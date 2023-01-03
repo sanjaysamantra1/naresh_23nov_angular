@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { add } from 'src/app/utils/math-utils';
 
 @Component({
   selector: 'app-footer',
@@ -10,5 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    add(2, 3);
+  }
 }
