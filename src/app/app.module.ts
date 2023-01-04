@@ -10,6 +10,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { ElectronicsComponent } from './components/electronics/electronics.component';
 import { LoginComponent } from './components/login/login.component';
 import { DatabindingComponent } from './components/databinding/databinding.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   // Components, Pipes , Directives
@@ -25,7 +26,7 @@ import { DatabindingComponent } from './components/databinding/databinding.compo
     DatabindingComponent,
   ],
   // Dependent Modules
-  imports: [BrowserModule],
+  imports: [BrowserModule, FormsModule],
   // Services / Injectables
   providers: [],
   // Main Component to Bootstrap/Load

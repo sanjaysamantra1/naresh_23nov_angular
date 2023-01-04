@@ -18,6 +18,9 @@ export class DatabindingComponent implements OnInit {
     this.flag = !this.flag;
   } */
 
+  a:number = 20;
+  b:number = 10;
+  
   constructor() {}
   ngOnInit(): void {}
 }

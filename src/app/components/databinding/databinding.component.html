@@ -10,9 +10,10 @@
 <img bind-src="img_url" class="ms-1">
 <br><br>
 <input value="Sachin Tendulkar" />
-<input value="{{name}}" class="ms-1" />
-<input [value]="name" class="ms-1" />
-<input bind-value="name" class="ms-1" />
+1-way: <input value="{{name}}" class="ms-1" />
+1-way: <input [value]="name" class="ms-1" />
+1-way: <input bind-value="name" class="ms-1" />
+2-way: <input [(ngModel)]="name" class="ms-1" />
 <hr>
 <button disabled="{{flag}}" class="btn btn-primary">Btn-1</button>
 <button [disabled]="flag" class="btn btn-primary ms-1">Btn-2</button>
@@ -31,3 +32,10 @@
 <input type="checkbox" (change)="this.flag = !this.flag"> Show password
 <br>
 <button (click)="this.flag = !this.flag"> {{flag ? 'HIDE' : 'SHOW'}} Password</button>
+<hr>
+<p>Number-1: <input type="number" [(ngModel)]="a"></p>
+<p>Number-2: <input type="number" [(ngModel)]="b"></p>
+<div>Addition of {{a}} & {{b}} is {{a+b}}</div>
+<div>Subtraction of {{a}} & {{b}} is {{a-b}}</div>
+<div>Multiplication of {{a}} & {{b}} is {{a*b}}</div>
+<hr>
