@@ -1,0 +1,11 @@
+<p>directives works!</p>
+
+<div *ngIf="n%2===0">{{n}} is Even</div>
+<div *ngIf="n%2!==0">{{n}} is Odd</div>
+
+<div *ngIf="n%2===0;else oddBlock">
+    <div>{{n}} is Even</div>
+</div>
+<ng-template #oddBlock>
+    <div>{{n}} is Odd</div>
+</ng-template>

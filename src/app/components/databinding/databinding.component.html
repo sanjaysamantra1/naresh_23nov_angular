@@ -1,6 +1,12 @@
+<style>
+    input {
+        border: 1px solid blue;
+        border-radius: 5px;
+    }
+</style>
 <p>databinding works!</p>
 
-<div>My Name is: {{name}}</div>
+<div style="color:blue">My Name is: {{name}}</div>
 <div>My Name is: <span [innerHTML]="name"></span></div>
 <div>My Name is: <span bind-innerHTML="name"></span></div>
 
@@ -39,3 +45,13 @@
 <div>Subtraction of {{a}} & {{b}} is {{a-b}}</div>
 <div>Multiplication of {{a}} & {{b}} is {{a*b}}</div>
 <hr>
+<textarea [(ngModel)]="msg" [maxlength]="maxChars" cols="30" rows="3"></textarea>
+<div>Message: {{msg}}</div>
+<div>Remaining: {{maxChars - msg.length}}</div>
+<hr>
+<p>Number1: <input type="number" #num1 id="num1" name="box1" placeholder="enter a number" /></p>
+<p>Number2: <input type="number" ref-num2 /></p>
+<button class="btn btn-primary" (click)="addition(+num1.value , +num2.value)">Add</button>
+<p>{{addMsg}}</p>
+
+<button (click)="f2(num1)">get The details of a template variable</button>

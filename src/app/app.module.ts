@@ -11,6 +11,7 @@ import { ElectronicsComponent } from './components/electronics/electronics.compo
 import { LoginComponent } from './components/login/login.component';
 import { DatabindingComponent } from './components/databinding/databinding.component';
 import { FormsModule } from '@angular/forms';
+import { DirectivesComponent } from './components/directives/directives.component';
 
 @NgModule({
   // Components, Pipes , Directives
@@ -24,6 +25,7 @@ import { FormsModule } from '@angular/forms';
     ElectronicsComponent,
     LoginComponent,
     DatabindingComponent,
+    DirectivesComponent,
   ],
   // Dependent Modules
   imports: [BrowserModule, FormsModule],
