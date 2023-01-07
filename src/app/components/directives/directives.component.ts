@@ -233,10 +233,20 @@ export class DirectivesComponent implements OnInit {
   employees = [
     { eId: 101, name: 'sanjay', sal: 5000 },
     { eId: 104, name: 'deepak', sal: 8000 },
-    { eId: 103, name: 'ranjan', sal: 7000 },
+    { eId: 102, name: 'ranjan', sal: 7000 },
     { eId: 102, name: 'manoj', sal: 9000 },
   ];
-
+  updateTableData() {
+    this.employees = [
+      { eId: 101, name: 'sanjay', sal: 5000 },
+      { eId: 104, name: 'deepak', sal: 8000 },
+      { eId: 102, name: 'ranjan', sal: 7000 },
+      { eId: 102, name: 'manoj', sal: 9500 },
+    ];
+  }
+  trackByEmpId(abc: any) {
+    return abc.eId;
+  }
   constructor() {}
   ngOnInit(): void {}
 }

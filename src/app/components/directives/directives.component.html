@@ -1154,11 +1154,31 @@ First value from cars arr is: {{cars[ind]}}
 <p>You have Selected: {{selectedCountry2}}</p>
 
 <table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Eid</th>
+            <th>name</th>
+            <th>salary</th>
+            <th>sl no</th>
+            <th>isFirst</th>
+            <th>isLast</th>
+            <th>isEven</th>
+            <th>isOdd</th>
+        </tr>
+    </thead>
     <tbody>
-        <tr *ngFor="let emp of employees">
+        <tr *ngFor="let emp of employees;let ind = index;
+        let isFirst=first;let isLast=last;
+        let isEven=even;let isOdd=odd;trackBy:trackByEmpId;">
             <td>{{emp.eId}}</td>
             <td>{{emp.name}}</td>
             <td>{{emp.sal}}</td>
+            <td>{{ind}}</td>
+            <td>{{isFirst}}</td>
+            <td>{{isLast}}</td>
+            <td>{{isEven}}</td>
+            <td>{{isOdd}}</td>
         </tr>
     </tbody>
 </table>
+<button (click)="updateTableData()">Update table data</button>

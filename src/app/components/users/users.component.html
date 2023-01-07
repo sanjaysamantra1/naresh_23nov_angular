@@ -1,0 +1,15 @@
+<h1 class="text-center bg-primary text-white">user List</h1>
+<table class="table table bordered table-striped">
+    <thead>
+        <tr>
+            <th *ngFor="let colName of colNames">{{colName}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users"> <!-- Rows -->
+            <td *ngFor="let colName of colNames"> <!-- Columns -->
+                {{user[colName]}}
+            </td>
+        </tr>
+    </tbody>
+</table>
