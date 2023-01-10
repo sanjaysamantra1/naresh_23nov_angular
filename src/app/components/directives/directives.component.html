@@ -1182,3 +1182,37 @@ First value from cars arr is: {{cars[ind]}}
     </tbody>
 </table>
 <button (click)="updateTableData()">Update table data</button>
+<hr />
+<p [style.color]="n % 2 == 0 ? 'blue' : 'red'"> Add a style dynamically {{n}} </p>
+<p [style.fontSize.px]='48'> Add style with unit </p>
+<p [style.background-color]=" flag?'green':'blue' "> Add style conditionally </p>
+<p [ngStyle]="n%2===0? {'color':'blue',border:'5px dotted green'}:{'color':'red',border:'5px dotted yellow'}">
+    {{n}} is {{n%2==0?'Even':'Odd'}}
+</p>
+<button class="btn" [ngClass]="!flag ? 'btn-lg btn-success' : 'btn-xs btn-danger'">Btn-1</button>
+<hr />
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Roll</th>
+            <th>Name</th>
+            <th>Mark</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngIf="students.length>0;else noRecord">
+            <tr *ngFor="let std of students;let i=index">
+                <td>{{std?.roll}}</td>
+                <td>{{std?.name}}</td>
+                <td>{{std?.mark}}</td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>
+<ng-template #noRecord>
+    <tr colspan="2" align="center">
+        No record Found
+    </tr>
+</ng-template>

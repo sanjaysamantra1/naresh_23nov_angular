@@ -234,7 +234,7 @@ export class DirectivesComponent implements OnInit {
     { eId: 101, name: 'sanjay', sal: 5000 },
     { eId: 104, name: 'deepak', sal: 8000 },
     { eId: 102, name: 'ranjan', sal: 7000 },
-    { eId: 102, name: 'manoj', sal: 9000 },
+    { eId: 103, name: 'manoj', sal: 9000 },
   ];
   updateTableData() {
     this.employees = [
@@ -249,4 +249,8 @@ export class DirectivesComponent implements OnInit {
   }
   constructor() {}
   ngOnInit(): void {}
+
+  students:any[] = [
+    // { roll: 101, name: 'sanjay', mark: 85 }
+  ];
 }

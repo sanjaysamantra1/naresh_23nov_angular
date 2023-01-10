@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "initiate":"ng serve -o --port=4300"
+    "initiate": "ng serve -o --port=4300"
   },
   "private": true,
   "dependencies": {
@@ -20,7 +20,10 @@
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
     "bootstrap": "^5.2.3",
+    "ng2-search-filter": "^0.5.1",
+    "ngx-pagination": "^6.0.3",
     "rxjs": "~7.5.0",
+    "sweetalert2": "^11.6.16",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
