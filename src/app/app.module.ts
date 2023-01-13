@@ -18,6 +18,10 @@ import { UsersComponent } from './components/users/users.component';
 import { GreetComponent } from './components/greet/greet.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { NumberonlyDirective } from './custom-directives/numberonly.directive';
+import { HighlightDirective } from './custom-directives/highlight.directive';
+import { PipesComponent } from './components/pipes/pipes.component';
+import { RemainingPipe } from './custom-pipes/remaining.pipe';
 
 @NgModule({
   // Components, Pipes , Directives
@@ -36,6 +40,10 @@ import { ProductListComponent } from './components/product-list/product-list.com
     GreetComponent,
     ModalComponent,
     ProductListComponent,
+    NumberonlyDirective,
+    HighlightDirective,
+    PipesComponent,
+    RemainingPipe,
   ],
   // Dependent Modules
   imports: [

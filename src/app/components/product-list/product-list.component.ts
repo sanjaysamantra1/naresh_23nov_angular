@@ -18,4 +18,10 @@ export class ProductListComponent implements OnInit {
   addToCart() {
     Swal.fire('Congratulations!', 'Your Item is added to cart!', 'success');
   }
+  sortAsc(){
+    this.products = this.products.sort((p1:any,p2:any)=>p1.price-p2.price)
+  }
+  sortDesc(){
+    this.products = this.products.sort((p1:any,p2:any)=>p2.price-p1.price)
+  }
 }

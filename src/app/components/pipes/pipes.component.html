@@ -1,0 +1,54 @@
+<p>pipes works!</p>
+
+<h4>Name is: {{name}}</h4>
+<h4>Name is: {{name | uppercase}}</h4>
+<h4>Name is: {{name | lowercase}}</h4>
+<h4>Name is: {{name | titlecase}}</h4>
+
+<h4>{{mySal}}</h4>
+<h4>{{mySal | currency}}</h4>
+<h4>{{mySal | currency : 'INR'}}</h4>
+<!-- input  |  pipeName : arg -->
+<h4>{{mySal | currency : '&euro;'}}</h4>
+<h4>{{mySal | currency : '&#x5143;'}}</h4>
+
+<h4>{{today}}</h4>
+<h4>{{today | date}}</h4>
+<h4>{{today | date:'fullDate'}}</h4>
+<h4>{{today | date:'mediumDate'}}</h4>
+<h4>{{today | date:'shortDate'}}</h4>
+<h4>{{today | date:'fullTime'}}</h4>
+<h4>{{today | date:'mediumTime'}}</h4>
+<h4>{{today | date:'shortTime'}}</h4>
+<h4>{{today | date:'dd-MMM-yyyy'}}</h4>
+<h4>{{today | date:'dd/MMMM/yyyy'}}</h4>
+<h4>{{ today | date: "fullTime":"UTC" }}</h4>
+
+<h4>{{12.1 | number : '3.2-5'}}</h4>
+<h4>{{12.123 | number : '3.2-5'}}</h4>
+<h4>{{12.1111222 | number : '3.2-5'}}</h4>
+<h4>{{0.25 | percent}}</h4>
+
+<h4>{{emp}}</h4>
+<h4>{{emp | json}}</h4>
+<hr>
+<h4 *ngFor="let entry of emp | keyvalue">
+    {{ entry.key }} ------- {{ entry.value }}
+</h4>
+<hr>
+<h4 *ngFor="let entry of empEntry">
+    {{entry[0]}} -----------{{entry[1]}}
+</h4>
+<hr>
+<h4>{{cars}}</h4>
+<h4>{{cars|slice:2:4}}</h4>
+<h4>{{cars|slice:2:-1}}</h4>
+<h4>{{cars|slice:-2:-1}}</h4>
+
+<!-- pipe Chaining -->
+<h4>{{today | date | uppercase }}</h4>
+<h4>{{today | date | lowercase }}</h4>
+
+<textarea [(ngModel)]="msg" maxlength=100 cols="30" rows="5"></textarea>
+<h4>Message is: {{msg}}</h4>
+<h4>Remaining Char: {{msg | remaining:100}}</h4>
