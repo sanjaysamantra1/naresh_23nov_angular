@@ -26,6 +26,12 @@ import { OrdinalPipe } from './custom-pipes/ordinal.pipe';
 import { NameprefixPipe } from './custom-pipes/nameprefix.pipe';
 import { MyfilterPipe } from './custom-pipes/myfilter.pipe';
 import { TruncatePipe } from './custom-pipes/truncate.pipe';
+import { MysortPipe } from './custom-pipes/mysort.pipe';
+import { ParentComponent } from './components/parent/parent.component';
+import { Child1Component } from './components/child1/child1.component';
+import { Child2Component } from './components/child2/child2.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { CategoryComponent } from './components/category/category.component';
 
 @NgModule({
   // Components, Pipes , Directives
@@ -52,6 +58,12 @@ import { TruncatePipe } from './custom-pipes/truncate.pipe';
     NameprefixPipe,
     MyfilterPipe,
     TruncatePipe,
+    MysortPipe,
+    ParentComponent,
+    Child1Component,
+    Child2Component,
+    CategoriesComponent,
+    CategoryComponent,
   ],
   // Dependent Modules
   imports: [

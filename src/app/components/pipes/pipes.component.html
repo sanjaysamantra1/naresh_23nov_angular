@@ -57,6 +57,8 @@
 <input [(ngModel)]="cardinal" type="number" />
 <h3>Cardinal number is {{cardinal}} , ordinal is {{cardinal | ordinal}}
 </h3>
+<h3>Another ordinal is {{ordinalRes}}</h3>
+<button (click)="convertToOrdinal()">get ordinal value</button>
 <hr />
 
 <div class="container">
@@ -96,3 +98,8 @@
 
 <h1>{{longStr | truncate : 12 : false : '***' }}</h1>
 <!-- Outputs: A really lon*** -->
+<hr>
+
+<b *ngFor='let ele of arr | mysort'>{{ele}}, &nbsp;</b>
+<input #newNum />
+<button class="ms-1" (click)="arr.push(+newNum.value)">Add</button>

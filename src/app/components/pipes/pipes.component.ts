@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OrdinalPipe } from 'src/app/custom-pipes/ordinal.pipe';
 
 @Component({
   selector: 'app-pipes',
@@ -14,6 +15,12 @@ export class PipesComponent implements OnInit {
   cars: string[] = ['Tata', 'Honda', 'maruti', 'Hundai', 'Toyota', 'Mahindra'];
   msg: string = '';
   cardinal: number = 21;
+  ordinalRes: string = '21st';
+
+  convertToOrdinal() {
+    const ordinalPipeObj = new OrdinalPipe();
+    this.ordinalRes = ordinalPipeObj.transform(this.cardinal);
+  }
 
   employees = [
     { eId: 101, name: 'sanjay', sal: 5000, gender: 'male' },
@@ -24,6 +31,8 @@ export class PipesComponent implements OnInit {
   searchText: string = '';
   longStr: string =
     'this is a long string, this is truncate pipe example, hello hiiii good morning';
+
+  arr: number[] = [10, 50, 20, 40, 30];
 
   constructor() {}
   ngOnInit(): void {}

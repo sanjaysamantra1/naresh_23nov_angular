@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   currentTime: string = '';
 
-  a = setInterval(() => {
-    this.currentTime = new Date().toLocaleTimeString();
-  }, 1000);
+  // a = setInterval(() => {
+  //   this.currentTime = new Date().toLocaleTimeString();
+  // }, 1000);
 }

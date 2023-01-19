@@ -1,0 +1,16 @@
+<div class="container border p-2">
+    <div class="row">
+        <p>I am Parent Component</p>
+        <p>My Own data a is: {{a}}</p>
+        <p>My Own data b is: {{b}}</p>
+        <p><input type="number" [(ngModel)]="a"></p>
+    </div>
+    <div class="row m-2">
+        <div class="col-sm-6 border">
+            <app-child1 [child1a]="a" [f1]="f1"></app-child1>
+        </div>
+        <div class="col-sm-6 border">
+            <app-child2 [b]="b"></app-child2>
+        </div>
+    </div>
+</div>
