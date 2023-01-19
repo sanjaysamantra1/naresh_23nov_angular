@@ -22,6 +22,10 @@ import { NumberonlyDirective } from './custom-directives/numberonly.directive';
 import { HighlightDirective } from './custom-directives/highlight.directive';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { RemainingPipe } from './custom-pipes/remaining.pipe';
+import { OrdinalPipe } from './custom-pipes/ordinal.pipe';
+import { NameprefixPipe } from './custom-pipes/nameprefix.pipe';
+import { MyfilterPipe } from './custom-pipes/myfilter.pipe';
+import { TruncatePipe } from './custom-pipes/truncate.pipe';
 
 @NgModule({
   // Components, Pipes , Directives
@@ -44,6 +48,10 @@ import { RemainingPipe } from './custom-pipes/remaining.pipe';
     HighlightDirective,
     PipesComponent,
     RemainingPipe,
+    OrdinalPipe,
+    NameprefixPipe,
+    MyfilterPipe,
+    TruncatePipe,
   ],
   // Dependent Modules
   imports: [

@@ -52,3 +52,47 @@
 <textarea [(ngModel)]="msg" maxlength=100 cols="30" rows="5"></textarea>
 <h4>Message is: {{msg}}</h4>
 <h4>Remaining Char: {{msg | remaining:100}}</h4>
+<hr />
+
+<input [(ngModel)]="cardinal" type="number" />
+<h3>Cardinal number is {{cardinal}} , ordinal is {{cardinal | ordinal}}
+</h3>
+<hr />
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 offset-3">
+            <input type="search" [(ngModel)]="searchText" placeholder="Search...">
+        </div>
+    </div>
+</div>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employees | myfilter:searchText:'sal'">
+            <td>{{emp.eId}}</td>
+            <td>{{emp.name | nameprefix : emp.gender}}</td>
+            <td>{{emp.sal}}</td>
+            <td>{{emp.gender}}</td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+<h1>{{longStr | truncate:23:true }}</h1>
+<!-- Outputs: A really long string that... -->
+
+<h1>{{longStr | truncate : 12 }}</h1>
+<!-- Outputs: A really lon... -->
+
+<h1>{{longStr | truncate : 12 : true }}</h1>
+<!-- Outputs: A really... -->
+
+<h1>{{longStr | truncate : 12 : false : '***' }}</h1>
+<!-- Outputs: A really lon*** -->
