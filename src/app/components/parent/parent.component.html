@@ -4,13 +4,15 @@
         <p>My Own data a is: {{a}}</p>
         <p>My Own data b is: {{b}}</p>
         <p><input type="number" [(ngModel)]="a"></p>
+        <p>Name from child-2 is {{pName}}</p>
+        <p>Name from child-2 is {{child2.name}}</p>
     </div>
     <div class="row m-2">
         <div class="col-sm-6 border">
-            <app-child1 [child1a]="a" [f1]="f1"></app-child1>
+            <app-child1 [child1a]="a" [f1]="f1" [pName]=pName [child2]="child2"></app-child1>
         </div>
         <div class="col-sm-6 border">
-            <app-child2 [b]="b"></app-child2>
+            <app-child2 [b]="b" (nameEvent)="receiveName($event)" #child2></app-child2>
         </div>
     </div>
 </div>

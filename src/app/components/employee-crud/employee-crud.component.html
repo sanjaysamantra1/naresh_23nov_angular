@@ -1,0 +1,16 @@
+<h2 class="text-center bg-success text-white p-2">This is Employee CRUD </h2>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <app-employee-list [employees]="employees"></app-employee-list>
+        </div>
+        <div class="col-sm-4">
+            <app-employee-add (addEmpEvent)="receiveNewEmployee($event)"></app-employee-add>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <app-employee-cards [employees]="employees"></app-employee-cards>
+        </div>
+    </div>
+</div>

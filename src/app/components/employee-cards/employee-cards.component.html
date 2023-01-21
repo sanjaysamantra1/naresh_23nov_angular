@@ -1,0 +1,16 @@
+<p>employee-cards works!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3" *ngFor="let emp of employees">
+            <div class="card text-center">
+                <img src="" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{emp.name}}</h5>
+                    <p class="card-text">{{emp.eid}}</p>
+                    <p class="card-text">{{emp.sal}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<h3 class="text-center">Employee List</h3>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>EID</th>
+            <th>name</th>
+            <th>Salary</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employees">
+            <td>{{emp.eid}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.sal}}</td>
+            <td>
+                <button class="btn btn-danger">DEL</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

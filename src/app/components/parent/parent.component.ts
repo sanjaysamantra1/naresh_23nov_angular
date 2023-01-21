@@ -8,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class ParentComponent implements OnInit {
   a: number = 10;
   b: number = 20;
+  pName: any;
 
   f1() {
     alert('I am f1 from parent...');
+  }
+  receiveName(name: string) {
+    this.pName = name;
   }
 
   constructor() {}

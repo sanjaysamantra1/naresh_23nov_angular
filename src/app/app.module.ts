@@ -32,6 +32,10 @@ import { Child1Component } from './components/child1/child1.component';
 import { Child2Component } from './components/child2/child2.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { CategoryComponent } from './components/category/category.component';
+import { EmployeeCrudComponent } from './components/employee-crud/employee-crud.component';
+import { EmployeeListComponent } from './components/employee-list/employee-list.component';
+import { EmployeeAddComponent } from './components/employee-add/employee-add.component';
+import { EmployeeCardsComponent } from './components/employee-cards/employee-cards.component';
 
 @NgModule({
   // Components, Pipes , Directives
@@ -64,6 +68,10 @@ import { CategoryComponent } from './components/category/category.component';
     Child2Component,
     CategoriesComponent,
     CategoryComponent,
+    EmployeeCrudComponent,
+    EmployeeListComponent,
+    EmployeeAddComponent,
+    EmployeeCardsComponent,
   ],
   // Dependent Modules
   imports: [
