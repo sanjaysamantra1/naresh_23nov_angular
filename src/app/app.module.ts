@@ -36,6 +36,9 @@ import { EmployeeCrudComponent } from './components/employee-crud/employee-crud.
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { EmployeeAddComponent } from './components/employee-add/employee-add.component';
 import { EmployeeCardsComponent } from './components/employee-cards/employee-cards.component';
+import { Mathdemo1Component } from './components/mathdemo1/mathdemo1.component';
+import { Mathdemo2Component } from './components/mathdemo2/mathdemo2.component';
+import { MovieListComponent } from './components/movie-list/movie-list.component';
 
 @NgModule({
   // Components, Pipes , Directives
@@ -72,6 +75,9 @@ import { EmployeeCardsComponent } from './components/employee-cards/employee-car
     EmployeeListComponent,
     EmployeeAddComponent,
     EmployeeCardsComponent,
+    Mathdemo1Component,
+    Mathdemo2Component,
+    MovieListComponent,
   ],
   // Dependent Modules
   imports: [
