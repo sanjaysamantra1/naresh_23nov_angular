@@ -3,3 +3,11 @@
 <p>My siblings's data name is: {{child2.name}}</p>
 <p>My siblings's data name is: {{pName}}</p>
 <button (click)="f1()">Click me</button>
+<p>
+    <span *ngFor="let ele of arr">{{ele}},&nbsp;</span>
+</p>
+<button (click)="refresh()">Refresh</button>
+<p>
+    <span *ngFor="let car of cars">{{car}},&nbsp;</span>
+</p>
+<button (click)="cars.push('maruti')">add new car</button>
