@@ -11,7 +11,7 @@ export class Mathdemo2Component implements OnInit {
   b = 25;
   addResult: number = 0;
 
-  constructor(private mathObj: MathService) {
+  constructor(public mathObj: MathService) {
     // Dependency Injection
   }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from 'src/app/services/employee.service';
 
 @Component({
   selector: 'app-employee-crud',
@@ -6,17 +7,38 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./employee-crud.component.css'],
 })
 export class EmployeeCrudComponent implements OnInit {
-  employees = [
-    { eid: 101, name: 'sanjay', sal: 5000 },
-    { eid: 104, name: 'deepak', sal: 8000 },
-    { eid: 103, name: 'ranjan', sal: 7000 },
-    { eid: 102, name: 'manoj', sal: 9000 },
-  ];
+  // employees = [
+  //   { eid: 101, name: 'sanjay', sal: 5000 },
+  //   { eid: 104, name: 'deepak', sal: 8000 },
+  //   { eid: 103, name: 'ranjan', sal: 7000 },
+  //   { eid: 102, name: 'manoj', sal: 9000 },
+  // ];
+  employees: any[] = [];
+  subscription1:any;
+  subscription2:any;
+
 
   receiveNewEmployee(empObj: any) {
-    this.employees.push(empObj);
+    // this.employees.push(empObj);
+    this.subscription1 = this.employeeService.addEmployee(empObj).subscribe(response=>{
+      alert('employee added successfully');
+      this.getEmployees();
+    })
+  }
+  getEmployees(){
+    this.subscription2 = this.employeeService.getAllEmployees().subscribe((response:any) => {
+      this.employees = response;
+    });
   }
 
-  constructor() {}
-  ngOnInit(): void {}
+  constructor(private employeeService: EmployeeService) {}
+
+  ngOnInit(): void {
+    this.getEmployees()
+  }
+  ngOnDestroy(){
+    this.subscription1.unsubscribe();
+    this.subscription2.unsubscribe();
+    // this.subscriptionsArr.forEach(ele=>ele.unsubscribe())
+  }
 }

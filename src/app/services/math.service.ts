@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class MathService {
   constructor() {}
   PI = 3.141;
+  x = 10;
 
   add(a: any, b: any) {
     return a + b;

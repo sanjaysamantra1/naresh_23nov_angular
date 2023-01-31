@@ -1,0 +1,21 @@
+<h1 class="text-center bg-primary text-white">user List from Live URL</h1>
+<button>users</button>
+<h1>fetching...</h1>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>username</th>
+            <th>email</th>
+            <th>city</th>
+            <th>phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users"> <!-- Rows -->
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.address.city}}</td>
+            <td>{{user.phone}}</td>
+        </tr>
+    </tbody>
+</table>

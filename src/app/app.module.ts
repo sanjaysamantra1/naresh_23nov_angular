@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -10,7 +11,6 @@ import { CenterComponent } from './components/center/center.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { ElectronicsComponent } from './components/electronics/electronics.component';
-import { LoginComponent } from './components/login/login.component';
 import { DatabindingComponent } from './components/databinding/databinding.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './components/directives/directives.component';
@@ -39,6 +39,10 @@ import { EmployeeCardsComponent } from './components/employee-cards/employee-car
 import { Mathdemo1Component } from './components/mathdemo1/mathdemo1.component';
 import { Mathdemo2Component } from './components/mathdemo2/mathdemo2.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
+import { Mathdemo3Component } from './components/mathdemo3/mathdemo3.component';
+import { MathService } from './services/math.service';
+import { LoginModule } from 'src/login/login.module';
+import { UserListComponent } from './components/user-list/user-list.component';
 
 @NgModule({
   // Components, Pipes , Directives
@@ -50,7 +54,6 @@ import { MovieListComponent } from './components/movie-list/movie-list.component
     NavbarComponent,
     CarouselComponent,
     ElectronicsComponent,
-    LoginComponent,
     DatabindingComponent,
     DirectivesComponent,
     UsersComponent,
@@ -78,6 +81,8 @@ import { MovieListComponent } from './components/movie-list/movie-list.component
     Mathdemo1Component,
     Mathdemo2Component,
     MovieListComponent,
+    Mathdemo3Component,
+    UserListComponent,
   ],
   // Dependent Modules
   imports: [
@@ -85,9 +90,11 @@ import { MovieListComponent } from './components/movie-list/movie-list.component
     FormsModule,
     NgxPaginationModule,
     Ng2SearchPipeModule,
+    LoginModule,
+    HttpClientModule,
   ],
   // Services / Injectables
-  providers: [],
+  providers: [MathService],
   // Main Component to Bootstrap/Load
   bootstrap: [AppComponent],
 })
