@@ -10,5 +10,7 @@ export class EmployeeListComponent implements OnInit {
   employees: any;
 
   constructor() {}
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+  }
 }

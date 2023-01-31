@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Employee } from 'src/app/models/employee';
 import { EmployeeService } from 'src/app/services/employee.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class EmployeeCrudComponent implements OnInit {
   //   { eid: 103, name: 'ranjan', sal: 7000 },
   //   { eid: 102, name: 'manoj', sal: 9000 },
   // ];
-  employees: any[] = [];
+  employees:Employee[]= [];
   subscription1:any;
   subscription2:any;
 
@@ -26,8 +27,9 @@ export class EmployeeCrudComponent implements OnInit {
     })
   }
   getEmployees(){
-    this.subscription2 = this.employeeService.getAllEmployees().subscribe((response:any) => {
+    this.subscription2 = this.employeeService.getAllEmployees().subscribe((response:Employee[]) => {
       this.employees = response;
+      console.log(this.employees)
     });
   }
 

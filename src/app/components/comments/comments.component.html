@@ -1,0 +1,19 @@
+<h2 class="text-center">Comments with Interface As Model</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let comment of comments">
+            <td>{{comment.id}}</td>
+            <td>{{comment.name}}</td>
+            <td>{{comment.email}}</td>
+            <!-- <td>{{comment.body}}</td> -->
+        </tr>
+    </tbody>
+</table>

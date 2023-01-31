@@ -43,6 +43,7 @@ import { Mathdemo3Component } from './components/mathdemo3/mathdemo3.component';
 import { MathService } from './services/math.service';
 import { LoginModule } from 'src/login/login.module';
 import { UserListComponent } from './components/user-list/user-list.component';
+import { CommentsComponent } from './components/comments/comments.component';
 
 @NgModule({
   // Components, Pipes , Directives
@@ -83,6 +84,7 @@ import { UserListComponent } from './components/user-list/user-list.component';
     MovieListComponent,
     Mathdemo3Component,
     UserListComponent,
+    CommentsComponent,
   ],
   // Dependent Modules
   imports: [

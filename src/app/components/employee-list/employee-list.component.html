@@ -4,7 +4,8 @@
     <thead>
         <tr>
             <th>EID</th>
-            <th>name</th>
+            <th>Name</th>
+            <th>Full Name</th>
             <th>Salary</th>
             <th>Action</th>
         </tr>
@@ -13,7 +14,9 @@
         <tr *ngFor="let emp of employees">
             <td>{{emp.id}}</td>
             <td>{{emp.firstName}}</td>
+            <td>{{emp.getFullName()}}</td>
             <td>{{emp.sal}}</td>
+            <td>{{emp.getYearlySalary()}}</td>
             <td>
                 <button class="btn btn-danger">DEL</button>
             </td>
