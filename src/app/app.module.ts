@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -44,6 +44,9 @@ import { MathService } from './services/math.service';
 import { LoginModule } from 'src/login/login.module';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { MyInterceptor1 } from './interceptors/my-interceptor1';
+import { MyInterceptor2 } from './interceptors/my-interceptor2';
+import { RetryInterceptor } from './interceptors/retry-interceptor';
 
 @NgModule({
   // Components, Pipes , Directives
@@ -96,7 +99,12 @@ import { CommentsComponent } from './components/comments/comments.component';
     HttpClientModule,
   ],
   // Services / Injectables
-  providers: [MathService],
+  providers: [
+    MathService,
+    { provide: HTTP_INTERCEPTORS, useClass: MyInterceptor1, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: MyInterceptor2, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: RetryInterceptor, multi: true }
+  ],
   // Main Component to Bootstrap/Load
   bootstrap: [AppComponent],
 })
