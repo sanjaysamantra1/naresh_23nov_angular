@@ -47,6 +47,8 @@ import { CommentsComponent } from './components/comments/comments.component';
 import { MyInterceptor1 } from './interceptors/my-interceptor1';
 import { MyInterceptor2 } from './interceptors/my-interceptor2';
 import { RetryInterceptor } from './interceptors/retry-interceptor';
+import { ObservableDemo1Component } from './components/observable-demo1/observable-demo1.component';
+import { ObservableDemo2Component } from './components/observable-demo2/observable-demo2.component';
 
 @NgModule({
   // Components, Pipes , Directives
@@ -88,6 +90,8 @@ import { RetryInterceptor } from './interceptors/retry-interceptor';
     Mathdemo3Component,
     UserListComponent,
     CommentsComponent,
+    ObservableDemo1Component,
+    ObservableDemo2Component,
   ],
   // Dependent Modules
   imports: [
