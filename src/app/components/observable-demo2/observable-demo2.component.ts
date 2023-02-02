@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormRecord } from '@angular/forms';
 import { from, interval, Observable, of, skip, take } from 'rxjs';
 
 @Component({
