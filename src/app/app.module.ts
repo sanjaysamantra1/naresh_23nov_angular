@@ -12,7 +12,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { ElectronicsComponent } from './components/electronics/electronics.component';
 import { DatabindingComponent } from './components/databinding/databinding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './components/directives/directives.component';
 import { UsersComponent } from './components/users/users.component';
 import { GreetComponent } from './components/greet/greet.component';
@@ -49,6 +49,8 @@ import { MyInterceptor2 } from './interceptors/my-interceptor2';
 import { RetryInterceptor } from './interceptors/retry-interceptor';
 import { ObservableDemo1Component } from './components/observable-demo1/observable-demo1.component';
 import { ObservableDemo2Component } from './components/observable-demo2/observable-demo2.component';
+import { ObservableDemo3Component } from './components/observable-demo3/observable-demo3.component';
+import { ObservableDemo4Component } from './components/observable-demo4/observable-demo4.component';
 
 @NgModule({
   // Components, Pipes , Directives
@@ -92,6 +94,8 @@ import { ObservableDemo2Component } from './components/observable-demo2/observab
     CommentsComponent,
     ObservableDemo1Component,
     ObservableDemo2Component,
+    ObservableDemo3Component,
+    ObservableDemo4Component,
   ],
   // Dependent Modules
   imports: [
@@ -101,6 +105,7 @@ import { ObservableDemo2Component } from './components/observable-demo2/observab
     Ng2SearchPipeModule,
     LoginModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   // Services / Injectables
   providers: [

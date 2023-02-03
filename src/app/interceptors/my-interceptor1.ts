@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 
 export class MyInterceptor1 implements HttpInterceptor {
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        console.log('MyInterceptor-1....')
+        // console.log('MyInterceptor-1....')
         if(false){
             // const token = loginService.myToken
             const hardCodedToken = "1d38fe-8671-6735-7360-2hjhsjh5";

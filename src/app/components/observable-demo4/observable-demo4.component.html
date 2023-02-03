@@ -1,0 +1,70 @@
+<div class="body">
+    <h1>Search for a Star Wars Character</h1>
+    <p>
+        Simply start typing the name of your favorite Star Wars character to see
+        more details about them!
+    </p>
+
+    <div [formGroup]="searchFormGroup">
+        <input formControlName="search" />
+    </div>
+
+    <ng-container *ngIf="searchResult$ | async as person">
+        <table *ngIf="person.name !== 'No results'; else noResults ">
+            <tr>
+                <td class="heading">
+                    Name
+                </td>
+                <td>
+                    {{ person.name }}
+                </td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+                <td class="heading">
+                    Birth Year
+                </td>
+                <td>
+                    {{ person.birthYear }}
+                </td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+                <td class="heading">
+                    Height
+                </td>
+                <td>
+                    {{ person.height }} cm
+                </td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+                <td class="heading">
+                    Weight
+                </td>
+                <td>
+                    {{ person.weight }} kg
+                </td>
+            </tr>
+
+            <tr></tr>
+            <tr>
+                <td class="heading">
+                    Eye Color
+                </td>
+                <td>
+                    {{ person.eyeColor }}
+                </td>
+            </tr>
+
+            <tr></tr>
+        </table>
+
+        <ng-template #noResults>
+            No Results Found
+        </ng-template>
+    </ng-container>
+</div>
