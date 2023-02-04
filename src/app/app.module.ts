@@ -51,6 +51,11 @@ import { ObservableDemo1Component } from './components/observable-demo1/observab
 import { ObservableDemo2Component } from './components/observable-demo2/observable-demo2.component';
 import { ObservableDemo3Component } from './components/observable-demo3/observable-demo3.component';
 import { ObservableDemo4Component } from './components/observable-demo4/observable-demo4.component';
+import { SubjectDemo1Component } from './components/subject-demo1/subject-demo1.component';
+import { SendMessageComponent } from './components/send-message/send-message.component';
+import { ReceiveMessageComponent } from './components/receive-message/receive-message.component';
+import { ReceiveMessage2Component } from './components/receive-message2/receive-message2.component';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   // Components, Pipes , Directives
@@ -96,6 +101,11 @@ import { ObservableDemo4Component } from './components/observable-demo4/observab
     ObservableDemo2Component,
     ObservableDemo3Component,
     ObservableDemo4Component,
+    SubjectDemo1Component,
+    SendMessageComponent,
+    ReceiveMessageComponent,
+    ReceiveMessage2Component,
+    CartComponent,
   ],
   // Dependent Modules
   imports: [
