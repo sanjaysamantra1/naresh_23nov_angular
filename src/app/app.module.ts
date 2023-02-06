@@ -56,6 +56,8 @@ import { SendMessageComponent } from './components/send-message/send-message.com
 import { ReceiveMessageComponent } from './components/receive-message/receive-message.component';
 import { ReceiveMessage2Component } from './components/receive-message2/receive-message2.component';
 import { CartComponent } from './components/cart/cart.component';
+import { FormDemo1Component } from './components/form-demo1/form-demo1.component';
+import { FormDemo2Component } from './components/form-demo2/form-demo2.component';
 
 @NgModule({
   // Components, Pipes , Directives
@@ -106,6 +108,8 @@ import { CartComponent } from './components/cart/cart.component';
     ReceiveMessageComponent,
     ReceiveMessage2Component,
     CartComponent,
+    FormDemo1Component,
+    FormDemo2Component,
   ],
   // Dependent Modules
   imports: [
