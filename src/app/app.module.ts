@@ -58,6 +58,8 @@ import { ReceiveMessage2Component } from './components/receive-message2/receive-
 import { CartComponent } from './components/cart/cart.component';
 import { FormDemo1Component } from './components/form-demo1/form-demo1.component';
 import { FormDemo2Component } from './components/form-demo2/form-demo2.component';
+import { FormDemo3Component } from './components/form-demo3/form-demo3.component';
+import { FormDemo4Component } from './components/form-demo4/form-demo4.component';
 
 @NgModule({
   // Components, Pipes , Directives
@@ -110,6 +112,8 @@ import { FormDemo2Component } from './components/form-demo2/form-demo2.component
     CartComponent,
     FormDemo1Component,
     FormDemo2Component,
+    FormDemo3Component,
+    FormDemo4Component,
   ],
   // Dependent Modules
   imports: [

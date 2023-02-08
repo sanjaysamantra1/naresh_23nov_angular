@@ -1,0 +1,46 @@
+<style>button{margin:5px}</style>
+
+<h1>Angular Nested FormArray / Dynamic FormArray</h1> 
+<form [formGroup]="empForm" (ngSubmit)="onSubmit()">
+  <div formArrayName="employees">
+    <div *ngFor="let employee of employees().controls; let empIndex=index">
+      <div
+        [formGroupName]="empIndex"
+        style="border: 2px solid blue; padding: 10px; width: 750px; margin: 10px;"
+      >
+        {{empIndex}} First Name :
+        <input type="text" formControlName="firstName" />
+        <span class="text-danger" *ngIf="checkMe(empIndex,'firstName')">
+          Minimum 5 chars required
+        </span>
+        Last Name:
+        <input type="text" formControlName="lastName" />
+ 
+        <button (click)="removeEmployee(empIndex)">Remove Emp</button>
+ 
+        <div formArrayName="skills">
+          <div
+            *ngFor="let skill of employeeSkills(empIndex).controls; let skillIndex=index"
+          >
+            <div [formGroupName]="skillIndex">
+              {{skillIndex}} Skill :
+              <input type="text" formControlName="skill" />
+              Exp:
+              <input type="text" formControlName="exp" />
+ 
+              <button (click)="removeEmployeeSkill(empIndex,skillIndex)">
+                Remove Skill
+              </button>
+            </div>
+          </div>
+        </div>
+        <button type="button" (click)="addEmployeeSkill(empIndex)">
+          Add Skill
+        </button>
+      </div>
+    </div>
+    <button type="button" (click)="addEmployee()">Add Employee</button>
+  </div>
+</form>
+ 
+{{this.empForm.value | json}}

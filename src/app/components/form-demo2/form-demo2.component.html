@@ -15,7 +15,7 @@
     </p>
     <p>
         Email:
-        <input name="email" type='email' [(ngModel)]='user.email' #email="ngModel" ngModel required email />
+        <input name="email" type='email' [(ngModel)]='user.email' #email="ngModel" ngModel required />
         <span *ngIf="email.hasError('required')" class="text-danger">email required</span>
         <span *ngIf="email.hasError('email')" class="text-danger">email pattern is not correct</span>
     </p>
