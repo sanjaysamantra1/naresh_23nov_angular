@@ -60,6 +60,12 @@ import { FormDemo1Component } from './components/form-demo1/form-demo1.component
 import { FormDemo2Component } from './components/form-demo2/form-demo2.component';
 import { FormDemo3Component } from './components/form-demo3/form-demo3.component';
 import { FormDemo4Component } from './components/form-demo4/form-demo4.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { CareersComponent } from './components/careers/careers.component';
+import { ContactusComponent } from './components/contactus/contactus.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   // Components, Pipes , Directives
@@ -114,6 +120,11 @@ import { FormDemo4Component } from './components/form-demo4/form-demo4.component
     FormDemo2Component,
     FormDemo3Component,
     FormDemo4Component,
+    HomeComponent,
+    AboutusComponent,
+    CareersComponent,
+    ContactusComponent,
+    NotfoundComponent,
   ],
   // Dependent Modules
   imports: [
@@ -123,7 +134,8 @@ import { FormDemo4Component } from './components/form-demo4/form-demo4.component
     Ng2SearchPipeModule,
     LoginModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   // Services / Injectables
   providers: [
