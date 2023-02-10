@@ -66,6 +66,10 @@ import { CareersComponent } from './components/careers/careers.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ProductdetailsComponent } from './components/productdetails/productdetails.component';
+import { ProductdetailComponent } from './components/productdetail/productdetail.component';
+import { PermanentjobsComponent } from './components/permanentjobs/permanentjobs.component';
+import { ContractjobsComponent } from './components/contractjobs/contractjobs.component';
 
 @NgModule({
   // Components, Pipes , Directives
@@ -125,6 +129,10 @@ import { AppRoutingModule } from './app-routing.module';
     CareersComponent,
     ContactusComponent,
     NotfoundComponent,
+    ProductdetailsComponent,
+    ProductdetailComponent,
+    PermanentjobsComponent,
+    ContractjobsComponent,
   ],
   // Dependent Modules
   imports: [

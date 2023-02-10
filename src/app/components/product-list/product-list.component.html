@@ -21,8 +21,9 @@
                         <p class="card-text">{{prod.title}}</p>
                         <p class="card-text">Price: {{prod.price}}</p>
                         <p class="card-text">Ratings: {{prod.rating.rate}}</p>
-                        <button class="btn btn-primary">BUY NOW </button>
-                        <button class="btn btn-secondary" (click)="addToCart(prod)">Add Cart </button>
+                        <button class="m-1" [routerLink]="['/productdetails', prod.id]">View</button>
+                        <button [routerLink]="['/productdetail']" [queryParams]="{id:prod.id,title:prod.title,price:prod.price}">View-2</button>
+                        <button (click)="doSOmethingAndGotoDetails(prod)">View-3</button>
                     </div>
                 </div>
             </div>
