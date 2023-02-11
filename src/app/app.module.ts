@@ -70,6 +70,7 @@ import { ProductdetailsComponent } from './components/productdetails/productdeta
 import { ProductdetailComponent } from './components/productdetail/productdetail.component';
 import { PermanentjobsComponent } from './components/permanentjobs/permanentjobs.component';
 import { ContractjobsComponent } from './components/contractjobs/contractjobs.component';
+import { ProductsComponent } from './components/products/products.component';
 
 @NgModule({
   // Components, Pipes , Directives
@@ -133,6 +134,7 @@ import { ContractjobsComponent } from './components/contractjobs/contractjobs.co
     ProductdetailComponent,
     PermanentjobsComponent,
     ContractjobsComponent,
+    ProductsComponent,
   ],
   // Dependent Modules
   imports: [

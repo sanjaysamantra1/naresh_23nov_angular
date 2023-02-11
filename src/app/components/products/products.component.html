@@ -1,0 +1,19 @@
+<h1 class="text-center bg-success text-white">This is Products Listing Page</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3" *ngFor="let prod of allProducts">
+            <div class="card text-center">
+                <img src={{prod.images[0]}}
+                    class="card-img-top" height="200px">
+                <div class="card-body">
+                    <h5 class="card-title">{{prod.category}}</h5>
+                    <p class="card-text">{{prod.title}}</p>
+                    <p class="card-text">{{prod.description}}</p>
+                    <p class="card-text">{{prod.rating}}</p>
+                    <p class="card-text">{{prod.brancd}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

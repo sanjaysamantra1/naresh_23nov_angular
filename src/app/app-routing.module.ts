@@ -10,6 +10,11 @@ import { PermanentjobsComponent } from './components/permanentjobs/permanentjobs
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductdetailComponent } from './components/productdetail/productdetail.component';
 import { ProductdetailsComponent } from './components/productdetails/productdetails.component';
+import { ProductsComponent } from './components/products/products.component';
+import { AuthChildGuard } from './guards/auth-child.guard';
+import { AuthGuard } from './guards/auth.guard';
+import { HasChangesGuard } from './guards/has-changes.guard';
+import { ProductsResolverService } from './services/products-resolver.service';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -17,16 +22,30 @@ const routes: Routes = [
   {
     path: 'careers',
     component: CareersComponent,
+    canActivateChild: [AuthChildGuard],
     children: [
-      { path: '', component: PermanentjobsComponent },
+      // { path: '', component: PermanentjobsComponent },
       { path: 'permanent', component: PermanentjobsComponent },
       { path: 'contract', component: ContractjobsComponent },
     ],
   },
-  { path: 'contactus', component: ContactusComponent },
-  { path: 'products', component: ProductListComponent },
+  {
+    path: 'contactus',
+    component: ContactusComponent,
+    canDeactivate: [HasChangesGuard],
+  },
+  {
+    path: 'products',
+    component: ProductListComponent,
+    canActivate: [AuthGuard],
+  },
   { path: 'productdetails/:id', component: ProductdetailsComponent },
   { path: 'productdetail', component: ProductdetailComponent },
+  {
+    path: 'dummyproducts',
+    component: ProductsComponent,
+    resolve: { products: ProductsResolverService },
+  },
   { path: '', component: HomeComponent },
   { path: '**', component: NotfoundComponent }, // wild card route
 ];

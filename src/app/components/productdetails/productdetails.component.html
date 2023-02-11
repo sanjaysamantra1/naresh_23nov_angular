@@ -1,11 +1,11 @@
 <h2 class="text-center">productdetails works!</h2>
 
 <div class="card col-sm-3 offset-3">
-    <img highlight src={{prod.image}} class="card-img-top" style='height:150px' alt="" />
+    <img highlight src={{prod?.image}} class="card-img-top" style='height:150px' alt="" />
     <div class="card-body text-center">
-        <h5 class="card-title">{{prod.category}}</h5>
-        <p class="card-text">{{prod.title}}</p>
-        <p class="card-text">Price: {{prod.price}}</p>
-        <p class="card-text">Ratings: {{prod.rating.rate}}</p>
+        <h5 class="card-title">{{prod?.category}}</h5>
+        <p class="card-text">{{prod?.title}}</p>
+        <p class="card-text">Price: {{prod?.price}}</p>
+        <p class="card-text">Ratings: {{prod?.rating?.rate}}</p>
     </div>
 </div>
