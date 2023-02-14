@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { CareersComponent } from './components/careers/careers.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
@@ -45,6 +45,18 @@ const routes: Routes = [
     path: 'dummyproducts',
     component: ProductsComponent,
     resolve: { products: ProductsResolverService },
+  },
+  {
+    path: 'customers',
+    loadChildren: () =>
+      import('./customers/customers.module').then((m) => m.CustomersModule),
+  },
+  {
+    path: 'grocery',
+    loadChildren: () =>
+      import('./grocery/grocery.module').then((m) => m.GroceryModule),
+    // canActivate: [AuthGuard],
+    canLoad: [AuthGuard],
   },
   { path: '', component: HomeComponent },
   { path: '**', component: NotfoundComponent }, // wild card route

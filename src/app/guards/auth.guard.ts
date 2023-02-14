@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  userRole: string = 'admin'; // collect user role from local storage/user service
+  userRole: string = 'admin1'; // collect user role from local storage/user service
 
   canActivate(
     route: ActivatedRouteSnapshot,

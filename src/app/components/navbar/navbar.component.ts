@@ -16,6 +16,8 @@ export class NavbarComponent implements OnInit {
     { text: 'Contact Us', link: 'contactus' },
     { text: 'Careers', link: 'careers' },
     { text: 'Product List', link: 'products' },
+    { text: 'Customers', link: 'customers' },
+    { text: 'Grocery', link: 'grocery' },
     { text: 'Products', link: 'dummyproducts' },
   ];
 }
